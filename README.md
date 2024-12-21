@@ -1,7 +1,15 @@
 # Real Estate Bookings App
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+<div align="center">
+  <div>
+    <img src="https://img.shields.io/badge/-Expo-black?style=for-the-badge&logoColor=white&logo=expo&color=000020" alt="expo" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
+    <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=FD366E" alt="appwrite" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+  </div>
+</div>
 
+## <a name="tech-stack">⚙️ Tech Stack</a>
 - React Native (Expo SDK 52)
 - Appwrite
 - TypeScript
