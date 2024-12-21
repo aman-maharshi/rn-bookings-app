@@ -12,7 +12,7 @@ export default function Index() {
         gap: 24,
       }}
     >
-      <Text>Home</Text>
+      <Text className="text-3xl text-blue-600 font-bold">Home</Text>
 
       <Link href="/sign-in">
         <Text>Sign In</Text>

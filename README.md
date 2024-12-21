@@ -5,7 +5,7 @@
 - React Native (Expo SDK 52)
 - Appwrite
 - TypeScript
-- Tailwind CSS
+- Tailwind CSS (NativeWind)
 
 <!-- ## <a name="libraries">🔗 Additional Libraries Used</a> -->
 

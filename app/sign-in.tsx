@@ -3,7 +3,7 @@ import React from 'react'
 
 const SignIn = () => {
   return (
-    <View>
+    <View className='p-8'>
       <Text>Sign In</Text>
     </View>
   )
