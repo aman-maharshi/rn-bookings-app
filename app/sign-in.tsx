@@ -13,11 +13,11 @@ const SignIn = () => {
 
   return (
     <SafeAreaView className='h-full bg-white'>
-      <ScrollView contentContainerClassName='h-full'>
+      <ScrollView contentContainerClassName='grow'>
         <Image
           source={images.onboarding}
-          className='w-full h-4/6'
-          resizeMode='contain'
+          className='w-full h-[500px]'
+          resizeMode='cover'
         />
 
         <View className='px-10'>
@@ -50,6 +50,7 @@ const SignIn = () => {
             </View>
           </TouchableOpacity>
         </View>
+        
       </ScrollView>
     </SafeAreaView>
   )
@@ -66,4 +67,5 @@ export default SignIn
   button -> TouchableOpacity
   image src -> source
   resizeMode -> contain
+  adding view inside TouchableOpacity to make it flex-row
 */
