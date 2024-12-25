@@ -28,8 +28,6 @@ export default function RootLayout() {
   }
 
   return (
-    <GlobalProvider>
-      <Stack screenOptions={{ headerShown: false }} />
-    </GlobalProvider>
+    <Stack screenOptions={{ headerShown: false }} />
   )
 }
