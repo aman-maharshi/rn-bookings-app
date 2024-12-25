@@ -4,17 +4,33 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 import images from '@/constants/images'
 import icons from '@/constants/icons'
-import { login } from '@/lib/appwrite'
+import { login, logout } from '@/lib/appwrite'
+import { useGlobalContext } from '@/lib/global-provider'
+import { Redirect, router } from 'expo-router'
 
 const SignIn = () => {
+  const { isLoggedIn, user, loading, refetch } = useGlobalContext()
+
+  // if (!loading && isLoggedIn) return <Redirect href='/' />
 
   const handleLogin = async () => {
     const result = await login()
 
     if (result) {
-      console.log('Login successful')
+      refetch()
     } else {
       Alert.alert('Error', 'Failed to login')
+    }
+  }
+
+  const handleLogout = async () => {
+    const result = await logout()
+
+    if (result) {
+      console.log('Logout successful')
+      router.push('/')
+    } else {
+      Alert.alert('Error', 'Failed to logout')
     }
   }
 
@@ -57,7 +73,7 @@ const SignIn = () => {
             </View>
           </TouchableOpacity>
         </View>
-        
+
       </ScrollView>
     </SafeAreaView>
   )
