@@ -1,12 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, ScrollView, SafeAreaView } from 'react-native'
 
-const Explore = () => {
+const ExploreScreen = () => {
   return (
-    <View className='p-8'>
-      <Text>Explore</Text>
-    </View>
+    <SafeAreaView className="h-full bg-white">
+      <ScrollView
+        contentContainerClassName="grow p-8"
+      >
+        <View className="flex-1 flex flex-col gap-8">
+          <Text className="text-3xl font-rubik-bold">Explore</Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
-export default Explore
+export default ExploreScreen
