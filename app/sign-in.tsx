@@ -11,8 +11,6 @@ import { Redirect, router } from 'expo-router'
 const SignIn = () => {
   const { isLoggedIn, user, loading, refetch } = useGlobalContext()
 
-  // if (!loading && isLoggedIn) return <Redirect href='/' />
-
   const handleLogin = async () => {
     const result = await login()
 
@@ -20,17 +18,6 @@ const SignIn = () => {
       refetch()
     } else {
       Alert.alert('Error', 'Failed to login')
-    }
-  }
-
-  const handleLogout = async () => {
-    const result = await logout()
-
-    if (result) {
-      console.log('Logout successful')
-      router.push('/')
-    } else {
-      Alert.alert('Error', 'Failed to logout')
     }
   }
 
@@ -74,21 +61,20 @@ const SignIn = () => {
           </TouchableOpacity>
         </View>
 
+        {/* <View className='px-10 my-5'>
+          <TouchableOpacity
+            onPress={() => router.push('/')}
+            className='rounded-full w-full py-4'
+          >
+            <Text className='text-lg font-rubik-medium text-gray-300 text-center'>
+              Back to Home
+            </Text>
+          </TouchableOpacity>
+        </View> */}
+
       </ScrollView>
     </SafeAreaView>
   )
 }
 
 export default SignIn
-
-/*
-  NOTES:
-
-  ScrollView - to make the content scrollable
-  shadow-zinc-300 - better shoadow
-  <br> -> "\n"
-  button -> TouchableOpacity
-  image src -> source
-  resizeMode -> contain
-  adding view inside TouchableOpacity to make it flex-row
-*/
