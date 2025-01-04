@@ -1,33 +1,44 @@
 import { Link } from "expo-router"
-import { SafeAreaView, ScrollView, Text, View } from "react-native"
+import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native"
+import images from '@/constants/images'
+import icons from '@/constants/icons'
+import Search from "@/components/search"
 
 const HomeScreen = () => {
   return (
     <SafeAreaView className="h-full bg-white">
-      <ScrollView
-        contentContainerClassName="grow p-8"
-      >
-        <View className="flex-1 flex flex-col gap-8">
-          <Text className="text-3xl font-rubik-bold">Home</Text>
-
-          <View className="h-0.5 bg-gray-300 my-6"></View>
-
-          <Link href="/sign-in">
-            <Text className="font-rubik text-2xl my-4">Sign In</Text>
-          </Link>
-          <Link href="/profile">
-            <Text className="font-rubik text-2xl my-4">Profile</Text>
-          </Link>
-          <Link href="/explore">
-            <Text className="font-rubik text-2xl my-4">Explore</Text>
-          </Link>
-          <Link href="/properties/1">
-            <Text className="font-rubik text-2xl my-4">Property #1</Text>
-          </Link>
-
-          <View className="h-0.5 bg-gray-300 my-6"></View>
+      <View className="px-5">
+        <View className="flex flex-row items-center justify-between mt-5">
+          <View className="flex flex-row">
+            <Image
+              source={images.avatar}
+              className="size-12 rounded-full"
+            />
+            <View className="flex flex-col items-start justify-center ml-2">
+              <Text className="text-xs font-rubik text-black-100">Good Morning</Text>
+              <Text className="text-base font-rubik-medium text-black-300">Lorem, ipsum</Text>
+            </View>
+          </View>
+          <Image
+            source={icons.bell}
+            className="size-6"
+          >
+          </Image>
         </View>
-      </ScrollView>
+      </View>
+
+      <View className="px-5">
+        <Search />
+
+        <View className="my-5">
+          <View className="flex flex-row items-center justify-between">
+            <Text className="text-xl font-rubik-bold text-black-300">Featured</Text>
+            <TouchableOpacity>
+              <Text className="text-base font-rubik-bold text-primary-300">See All</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   )
 }
