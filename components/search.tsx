@@ -10,10 +10,13 @@ const Search = () => {
   const params = useLocalSearchParams<{ query?: string }>()
   const [search, setSearch] = useState(params.query || '')
 
-  const debouncedSearch = useDebouncedCallback((text: string) => router.setParams({ query: text }), 500)
+  // only modify router after 500ms
+  const debouncedSearch = useDebouncedCallback((text: string) =>
+     router.setParams({ query: text }), 500
+  )
 
   const handleSearch = (text: string) => {
-    // setSearch(text)
+    setSearch(text)
     debouncedSearch(text)
   }
 

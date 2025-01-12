@@ -3,6 +3,7 @@ import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "r
 import images from '@/constants/images'
 import icons from '@/constants/icons'
 import Search from "@/components/search"
+import { Card, FeaturedCard } from "@/components/cards"
 
 const HomeScreen = () => {
   return (
@@ -38,6 +39,11 @@ const HomeScreen = () => {
             </TouchableOpacity>
           </View>
         </View>
+
+        <FeaturedCard />
+
+        {/* <Card /> */}
+
       </View>
     </SafeAreaView>
   )
