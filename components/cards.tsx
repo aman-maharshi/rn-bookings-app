@@ -55,7 +55,7 @@ export const FeaturedCard = ({ onPress }: Props) => {
 
 export const Card = ({ onPress }: Props) => {
   return (
-    <TouchableOpacity onPress={onPress} className='flex-1 w-full px-3 py-4 rounded-lg bg-white shadow-lg shadow-black-100/70 relative'>
+    <TouchableOpacity onPress={onPress} className='flex-1 w-full px-3 py-4 rounded-lg bg-white shadow-lg shadow-black-100/70 relative mb-4'>
       <View className='absolute top-5 right-5 flex flex-row items-center px-2 bg-white/90 py-1 rounded-full z-50'>
         <Image
           source={icons.star}
